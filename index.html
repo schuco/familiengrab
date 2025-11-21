@@ -178,6 +178,37 @@
       list-style: none;
     }
     .small-list li { color: var(--muted); }
+    .diagram {
+      margin-top: 48px;
+      background: var(--card);
+      border: 1px solid rgba(36,49,57,0.08);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .diagram header {
+      padding: 0 0 12px;
+      max-width: none;
+      margin: 0;
+    }
+    .diagram-title {
+      font-family: 'Playfair Display', 'Georgia', serif;
+      font-size: 22px;
+      margin: 0 0 4px;
+    }
+    .diagram-lead {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .diagram-frame {
+      width: 100%;
+      min-height: 480px;
+      border: 1px solid rgba(36,49,57,0.1);
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(76,107,128,0.05), rgba(190,123,71,0.05));
+      overflow: auto;
+    }
     @media (max-width: 640px) {
       header { padding: 32px 18px; }
       main { padding: 0 18px 48px; }
@@ -202,6 +233,15 @@
       <h2 class="section-title">Wer hier ruht</h2>
       <p class="lead">Alle Personen wurden aus der GEDCOM-Datei (<code>tree5-2025-10-28.ged</code>) mit der Lageangabe "Katholischer Friedhof, Huckarde" übernommen. Sortiert nach Generation, dann Geburtsdatum; Ehegatten stehen nebeneinander.</p>
       <div id="burial-grid" class="grid"></div>
+    </section>
+
+    <section class="diagram">
+      <header>
+        <h2 class="diagram-title">Verwandtschaftsübersicht</h2>
+        <p class="diagram-lead">SVG-Export aus webtrees/gvexport: zeigt die Personen und ihre Beziehungen. Zoomen über die Browser-UI ist möglich.</p>
+      </header>
+      <object class="diagram-frame" data="gvexport-1.svg" type="image/svg+xml" aria-label="Stammbaum-Diagramm"></object>
+      <p class="diagram-lead" style="margin-top:10px;">Falls das SVG nicht lädt, <a href="gvexport-1.svg" target="_blank" rel="noopener">hier separat öffnen</a>.</p>
     </section>
 
     <section>
