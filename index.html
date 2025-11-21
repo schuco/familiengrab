@@ -120,11 +120,11 @@
       overflow: hidden;
     }
     .card .portrait {
-      width: 100%;
-      max-height: 220px;
-      object-fit: cover;
+      width: 70%;
+      max-height: 260px;
+      object-fit: contain;
       border-radius: 12px;
-      margin-bottom: 10px;
+      margin: 0 auto 10px;
       border: 1px solid rgba(36,49,57,0.08);
       background: rgba(36,49,57,0.04);
     }
@@ -213,6 +213,7 @@
       header { padding: 32px 18px; }
       main { padding: 0 18px 48px; }
       .hero { padding: 26px; }
+      .pair { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -222,7 +223,7 @@
       <h1>Familiengrab Huckarde</h1>
       <p class="tagline">Katholischer Friedhof, Huckarde — Erinnerung an die Familien Schulte-Coerne und Peveling gen. Reddemann.</p>
       <div class="meta">
-        <span class="pill">Letzte Datenaktualisierung: 28.10.2025 (GEDCOM)</span>
+        <span class="pill">Letzte Aktualisierung: 28.10.2025</span>
         <span class="pill">Ort: Altfriedstraße, Dortmund-Huckarde</span>
       </div>
     </div>
@@ -231,7 +232,7 @@
   <main>
     <section>
       <h2 class="section-title">Wer hier ruht</h2>
-      <p class="lead">Alle Personen wurden aus der GEDCOM-Datei (<code>tree5-2025-10-28.ged</code>) mit der Lageangabe "Katholischer Friedhof, Huckarde" übernommen. Sortiert nach Generation, dann Geburtsdatum; Ehegatten stehen nebeneinander.</p>
+      <p class="lead">Alle Personen mit der Lageangabe "Katholischer Friedhof, Huckarde". Sortiert nach Generation, dann Geburtsdatum; Ehegatten stehen nebeneinander.</p>
       <div id="burial-grid" class="grid"></div>
     </section>
 
@@ -244,15 +245,7 @@
       <p class="diagram-lead" style="margin-top:10px;">Falls das SVG nicht lädt, <a href="gvexport-1.svg" target="_blank" rel="noopener">hier separat öffnen</a>.</p>
     </section>
 
-    <section>
-      <h2 class="section-title">Hinweise</h2>
-      <ul class="small-list">
-        <li>Änderungen an Namen oder Daten: GEDCOM aktualisieren und die Seite neu erzeugen.</li>
-        <li>Fotos/Quellen liegen in den verknüpften Medienobjekten der GEDCOM (z.&nbsp;B. <code>@M6091@</code> Sterbeurkunde).</li>
-        <li>GitHub Pages: <code>index.html</code> ins Root Ihres Repos legen, Pages auf den <code>main</code>-Branch bzw. <code>docs/</code> konfigurieren.</li>
-      </ul>
-      <p class="footer-note">Gestaltung: warme Akzente und ruhige Typografie für eine würdige Darstellung der Familiengeschichte.</p>
-    </section>
+    
   </main>
 
         <script>
