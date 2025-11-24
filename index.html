@@ -266,6 +266,7 @@
       { name: 'Rosemarie Peveling gen. Reddemann (geb. Noderer)', branch: 'Peveling gen. Reddemann', birth: '22.02.1941', death: '15.08.2010', burial: '08.2010', generation: 3, partnerId: 'g3p2', photo: 'Noderer, Rosemarie.jpg' },
 
       { name: 'Wilhelm Bernhard Schulte-Coerne', branch: 'Schulte-Coerne', birth: '26.06.1950', death: '18.03.2024', burial: '27.03.2024', generation: 4, photo: 'Schulte-Coerne, Wilhelm Bernhard.jpg' },
+      { name: 'Christoph Schulte-Coerne (tot geboren)', branch: 'Schulte-Coerne', birth: '24.09.1953', death: '24.09.1953', burial: '', burialPlace: 'Familiengruft, Katholischer Friedhof, Huckarde (Tafel)', generation: 4, photo: null },
       { name: 'Sabine Peveling gen. Reddemann', branch: 'Peveling gen. Reddemann', birth: '18.05.1965', death: '24.05.2006', burial: '2006', generation: 4, photo: null },
       { name: 'Valentin Peveling gen. Reddemann', branch: 'Peveling gen. Reddemann', birth: '14.05.1997', death: '15.05.1997', burial: '05.1997', generation: 5, photo: null }
     ];
@@ -311,9 +312,9 @@
 
       const burial = document.createElement('p');
       burial.className = 'burial';
-      burial.textContent = `Beisetzung: ${person.burial} - Katholischer Friedhof, Huckarde`;
+      const burialPlace = person.burialPlace || 'Katholischer Friedhof, Huckarde';
+      burial.textContent = person.burial ? `Beisetzung: ${person.burial} - ${burialPlace}` : `Beisetzung: ${burialPlace}`;
       card.appendChild(burial);
-
       return card;
     };
 
